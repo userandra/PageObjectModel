@@ -4,14 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MenuPage {
+import utils.SeleniumWrappers;
+
+public class MenuPage extends SeleniumWrappers{
 	
-	public WebDriver driver; //obiectul
+	//public WebDriver driver; //obiectul
+	
+	private WebDriver driver;
 	
 	public MenuPage(WebDriver driver) {
 		this.driver = driver;
 }
 	
+	//MenuPage menu = new MenuPage(driver);
 	
 	//WebElement shopLink = driver.findElement(By.cssSelector("div[class='menu_main_wrap'] a[href='https://keybooks.ro/shop/']"));
 			
@@ -29,15 +34,16 @@ public class MenuPage {
 	}
 		
 	public void search(String text) {
-		driver.findElement(searchIcon).click();
+		/*driver.findElement(searchIcon).click();
 		driver.findElement(searchField).sendKeys(text);
-		driver.findElement(searchIcon).click();
+		driver.findElement(searchIcon).click();*/
+		
 		click(searchIcon);
 		sendKeys(searchField, text);
 		click(searchIcon);
 	}
 	
 	
-	}
+}
 		
 
