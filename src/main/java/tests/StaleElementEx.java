@@ -33,8 +33,7 @@ public class StaleElementEx extends BaseTest{
 		select.selectByValue("date");
 		
 	}
-	
-	
-	
 
 }
+
+

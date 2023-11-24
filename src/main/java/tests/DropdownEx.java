@@ -32,7 +32,4 @@ public class DropdownEx extends BaseTest{
 		app.shop.selectByVisibleText("Sort by average rating");
 		assertEquals(app.shop.getSelectedOption(), "Sort by average rating");	
 	}
-	
-	
-
 }

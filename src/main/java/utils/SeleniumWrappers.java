@@ -27,20 +27,28 @@ public class SeleniumWrappers extends BaseTest{
 	public void sendKeys(By locator, String text) {
 		//WebElement element = driver.findElement(locator);
 		waitForElementToBeVisible(locator);
+		returnElement(locator).clear();
 		returnElement(locator).sendKeys(text);
 	}
 		//returnElement(locator).sendKeys(text);
 		
 	public WebElement returnElement(By locator) {
 		return driver.findElement(locator);
-		
+
 	}
 	
 	public void waitForElementToBeVisible(By locator) {
 		
 		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+		
+	public boolean elementIsDisplayed(By locator) {
+		waitForElementToBeVisible(locator);
+		return driver.findElement(locator).isDisplayed();	
 		
 	}
 	
+		
 }
+	

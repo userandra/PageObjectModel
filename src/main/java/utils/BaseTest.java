@@ -32,7 +32,6 @@ import pages.BasePage;
 			driver.quit(); //se inchide instanta de browser
 					
 		}
-
 	}
 
 

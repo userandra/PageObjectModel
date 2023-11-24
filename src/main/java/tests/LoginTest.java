@@ -18,7 +18,6 @@ public class LoginTest extends BaseTest {
 		app.menu.navigateTo(app.menu.loginLink);
 		// menu.search("Why");
 	
-
 		app.click(app.menu.loginLink);
 
 		// LoginPage login = new LoginPage(driver);

@@ -14,7 +14,6 @@ public class XpathExample2 extends BaseTest{
 	 * 1. Xpath poate sa urce in sus in DOM. Css nu poate decat sa coboare
 	 * 2. Xpath poate sa citeasca textul dintre tagurile HTML. Css nu poate accesa decat ce se afla intre < >
 	 * 3. Xpath poate sa acceseze pe baza de index orice element. Css doar list items 
-	 * 
 	 */
 	
 	//Xpath AXES
@@ -89,13 +88,12 @@ public class XpathExample2 extends BaseTest{
 		jse.executeScript
 		("arguments[0].setAttribute('style', 'background:purple; border:4px solid blue')", rememberForgetBox);
 		
-		//preceding --> urca in sus in dom nu are nevoie de relatie de rudenie
+		//preceding --> urca in sus in DOM nu are nevoie de relatie de rudenie
 		WebElement submitButton= driver.findElement
 				(By.xpath("//div[@class='top_panel_middle']/preceding::input[@class='submit_button']"));
 		jse.executeScript
 		("arguments[0].setAttribute('style', 'background:purple; border:4px solid pink')", submitButton);
 		
 	}
-	
 
 }
