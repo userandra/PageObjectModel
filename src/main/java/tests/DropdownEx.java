@@ -12,6 +12,7 @@ public class DropdownEx extends BaseTest{
 		
 		app.click(app.menu.shopLink);
 		app.shop.selectByValue("date");
+		app.click(app.menu.contactsLink);
 		
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/?orderby=date");
 		assertEquals(app.shop.getSelectedOption(), "Sort by latest");		

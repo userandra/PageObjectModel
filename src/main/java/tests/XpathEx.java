@@ -21,8 +21,7 @@ public class XpathEx extends BaseTest{
 		 *  	-->  li[class='menu_user_login']
 		 * 
 		 * xpath --> //tagname[@atribut="valoare-atribut"]
-		 * 	     --> //li[@class='menu_user_login']
-		 * 
+		 * 	     --> //li[@class='menu_user_login'] 
 		 */
 		
 		WebElement loginLink = driver.findElement(By.xpath("//li[@class='menu_user_login']"));
@@ -62,8 +61,7 @@ public class XpathEx extends BaseTest{
 		/*
 		 * in xpath functia text() stie sa acceseze textul dintre tagurile HTML
 		 * 
-		 * //a[text()='Settings']
-		 * 
+		 * //a[text()='Settings'] 
 		 */		
 		driver.findElement(By.xpath("//a[text()='Settings']")).click();
 		

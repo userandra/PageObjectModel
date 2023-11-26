@@ -38,8 +38,9 @@ public class DataProviderEx extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "loginTestData")
-	public void loginTest(String user, String pass, boolean success) throws IOException {
+	@Test(dataProvider = "loginTestData", groups = "loginFunctionality")
+	//public void loginTest(String user, String pass, boolean success)throws IOException {
+	public void loginTest(String user, String pass, boolean success){	
 		ScreenShot.screenshot(driver);
 		app.click(app.menu.loginLink);
 		ScreenShot.screenshot(driver);

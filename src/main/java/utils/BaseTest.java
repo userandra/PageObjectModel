@@ -14,7 +14,7 @@ import pages.BasePage;
 		public static WebDriver driver;
 		public BasePage app;
 		
-		@BeforeClass
+		@BeforeClass(alwaysRun = true)
 		public void setup() {
 			
 			driver = new ChromeDriver();
@@ -25,7 +25,7 @@ import pages.BasePage;
 			app = new BasePage();
 		}
 		
-		@AfterClass
+		@AfterClass(alwaysRun = true)
 		public void tearDown() throws InterruptedException {
 			Thread.sleep(4000);
 			//driver.close(); //se inchide tabul curent

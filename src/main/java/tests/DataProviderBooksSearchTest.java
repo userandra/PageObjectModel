@@ -6,10 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import utils.BaseTest;
 import utils.DataProviderClass;
 import utils.SeleniumWrappers;
 
-public class DataProviderBooksSearchTest extends SeleniumWrappers{
+public class DataProviderBooksSearchTest extends BaseTest{
 	
 	@Test(dataProviderClass = DataProviderClass.class, dataProvider = "bookPictures")
 	public void searchBooksTest(String bookName, String bookPicture) throws InterruptedException {

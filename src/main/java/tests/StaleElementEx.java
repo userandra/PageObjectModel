@@ -30,6 +30,7 @@ public class StaleElementEx extends BaseTest{
 		
 		//incerc sa ma folosesc de un element pe care selenium il are asociat cu alt session id la browser
 		//si crapa 100% cu stale element reference
+		
 		select.selectByValue("date");
 		
 	}
