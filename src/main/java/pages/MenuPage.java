@@ -31,7 +31,7 @@ public class MenuPage extends SeleniumWrappers{
 	public By aboutLink = By.linkText("ABOUT");
 	public By searchIcon = By.cssSelector("button[class* ='icon-search']");
 	public By searchField = By.cssSelector("input[class='search_field']");
-	
+	public By postFormatsLink = By.linkText("Post Formats");
 		
 	public void navigateTo(By locator) {
 		//driver.findElement(locator).click();
@@ -48,8 +48,6 @@ public class MenuPage extends SeleniumWrappers{
 		sendKeys(searchField, text);
 		click(searchIcon);
 	}
-	
-	
 }
 		
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import utils.SeleniumWrappers;
 
 public class LoginPage extends SeleniumWrappers{
+	
 	public WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {

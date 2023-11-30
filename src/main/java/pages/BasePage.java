@@ -10,7 +10,9 @@ public class BasePage extends SeleniumWrappers{
 			public LoginPage login =  new LoginPage(driver);
 			public ShopPage shop =  new ShopPage();
 			public SearchResultPage searchResult = new SearchResultPage();
-		
+			public PostFormatsPage postFormat =  new PostFormatsPage();
+			public ContactsPage contacts =  new ContactsPage();
+			
 	}
 	
 

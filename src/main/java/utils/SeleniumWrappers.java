@@ -50,7 +50,7 @@ public class SeleniumWrappers extends BaseTest{
 		
 	}
 	
-	public void hooverElement(By locator) {
+	public void hoverElement(By locator) {
 		
 		Actions action = new Actions(driver);
 		action.moveToElement(returnElement(locator)).perform();

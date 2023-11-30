@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 import utils.SeleniumWrappers;
 
 public class ShopPage extends SeleniumWrappers {
+	
 	public By dropdown = By.name("orderby");
 	
 	public By sliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
