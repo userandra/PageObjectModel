@@ -54,6 +54,7 @@ public class DataProviderEx extends BaseTest {
 			app.click(app.login.logoutButton);
 			
 		} else if (!success) {
+			
 			assertTrue(app.elementIsDisplayed(app.login.loginErrorMsg));
 			app.click(app.login.closePopUpButton);
 

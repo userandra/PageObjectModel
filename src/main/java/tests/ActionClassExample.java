@@ -103,5 +103,4 @@ public class ActionClassExample extends BaseTest{
 				.keyUp(cmdCtrl).perform();
 		}
 
-	
 }

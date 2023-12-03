@@ -42,8 +42,7 @@ public class ScrollExample extends BaseTest{
 		public void scrollTopAndDown() throws InterruptedException {
 			
 			//JSExecutor scroll
-			
-			
+		
 			//Action class scroll
 			Actions action = new Actions(driver);		
 			action.sendKeys(Keys.END).perform();

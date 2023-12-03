@@ -15,7 +15,7 @@ public class LoginPage extends SeleniumWrappers{
 	
 	public By usernameField = By.id("log");
 	public By passwordField = By.name("pwd");
-	public By sumbitButton = By.className("submit_button");
+	public By submitButton = By.className("submit_button");
 	public By closePopUpButton = By.className("popup_close");
 	public By logoutButton = By.linkText("Logout");
 	public By loginSucessMsg = By.cssSelector("div[class*='sc_infobox_style_success']");
@@ -25,7 +25,7 @@ public class LoginPage extends SeleniumWrappers{
 		
 		sendKeys(usernameField, user);
 		sendKeys(passwordField, pass);
-		click(sumbitButton);
+		click(submitButton);
 	}
 	
 	public void closePopUp() {
