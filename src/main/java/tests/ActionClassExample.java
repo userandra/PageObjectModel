@@ -1,5 +1,9 @@
 package tests;
 
+import java.security.Key;
+
+import javax.swing.plaf.basic.BasicSplitPaneUI.KeyboardUpLeftHandler;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
@@ -77,7 +81,7 @@ public class ActionClassExample extends BaseTest{
 		
 		
 		@Test
-		public void keysExample() {
+		public void keysExample() throws InterruptedException {
 			
 			app.click(app.menu.loginLink);
 			
@@ -86,21 +90,23 @@ public class ActionClassExample extends BaseTest{
 			action.sendKeys(app.returnElement(app.login.usernameField), "Abracadabra").perform();
 			
 			action.doubleClick().perform();
+			Thread.sleep(2000); //am add eu plus InterruptedException pe publ void
 		
-			Keys cmdCtrl = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
+			Keys cmdCtrl = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL; //
 					
 			action
-				//.keyDown(Keys.CONTROL)
-				.keyDown(cmdCtrl)
-				.sendKeys("c")
-				//.keyUp(Keys.CONTROL)//.perform();
-				.keyUp(cmdCtrl)	
-				.sendKeys(Keys.TAB)
-				//.keyDown(Keys.CONTROL)
-				.keyDown(cmdCtrl)
-				.sendKeys("v")
-				//.keyUp(Keys.CONTROL).perform();
-				.keyUp(cmdCtrl).perform();
+			//.keyDown(Keys.CONTROL)
+			.keyDown(cmdCtrl)
+			.sendKeys("c")
+			//.keyUp(Keys.CONTROL)//.perform();
+			.keyUp(cmdCtrl)	
+			.sendKeys(Keys.TAB)
+			//.keyDown(Keys.CONTROL)
+			.keyDown(cmdCtrl)
+			.sendKeys("v")
+			//.keyUp(Keys.CONTROL).perform();
+			.keyUp(cmdCtrl).perform();
+
 		}
 
 }

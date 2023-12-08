@@ -40,7 +40,8 @@ public class SeleniumWrappers extends BaseTest{
 	
 	public void waitForElementToBeVisible(By locator) {
 		
-		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(10)); //explicit wait-webdriver-ul asteapta 10sec ca sa gaseasca elem (se aplica doar ptr anumite elem) si dc nu-l gaseste arunca o exceptie
+		//exceptia este:"ElementNoVisibleException"
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 		
